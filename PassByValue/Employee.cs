@@ -10,6 +10,6 @@ namespace PassByValue
     {
         public string Name  { get; set; }
         public int ID { get; set; }
-        public string Dep { get; set; }
+        public string Depa { get; set; }
     }
 }
