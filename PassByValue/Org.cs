@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static System.Windows.Forms.CheckedListBox;
 
 namespace PassByValue
 {
@@ -38,13 +39,24 @@ namespace PassByValue
         }
 
         private void button2_Click(object sender, EventArgs e)
-        {
-           checkedListBox1.Items
-        }
-       public async Task MoveItemasync()
-        {
-            await 
 
+
+        {
+
+
+            checkedListBox1.CheckedItems.Cast<Object>().ToList().ForEach(e =>
+
+           {
+               var emps = o.Employees.FirstOrDefault(emp => emp.Name == Convert.ToString(e));
+              checkedListBox2.Items.Add(emps.Name);
+           });
+
+         
         }
+       //public async Task MoveItemasync()
+       // {
+       //     await 
+
+       // }
     }
 }
